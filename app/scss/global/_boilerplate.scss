@@ -1,0 +1,66 @@
+@use 'font' as f;
+@use 'color' as c;
+@use '../util' as u;
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: f.$font;
+    background-color: c.$AlmostWhite;
+    max-width: u.rem(1440);
+    margin: auto;
+    overflow-x: hidden;
+}
+.button{
+    padding: u.rem(11) u.rem(59.4);
+    border: u.rem(1) solid c.$MediumGray;
+    border-radius: u.rem(20);
+    cursor: pointer;
+    @include u.breakpoint-up(large){
+        padding: u.rem(11) u.rem(13.2);
+    }
+}
+.container{
+    padding-inline: u.rem(16);
+    padding-block: u.rem(25);
+    @include u.breakpoint-up(large){
+        padding-inline: u.rem(40);
+    }
+}
+.flex{
+    display: flex;
+
+    &--jc-c{
+        justify-content: center;
+    }
+    &--jc-sb{
+        justify-content: space-between;
+    }
+    &--ai-c{
+        align-items: center;
+    }
+    &--d-c{
+        flex-direction: column;
+    }
+    &--jc-s{
+        justify-content: start;
+    }
+}
+.hide-for-mobile{
+    @include u.breakpoint-down(medium){
+        display: none;
+    }
+}
+
+.hide-for-desktop{
+    @include u.breakpoint-up(large){
+        display: none;
+    }
+}

@@ -1,0 +1,7 @@
+var iconArrow = document.querySelector('#icon-arrow')
+    if(iconArrow.src.match("images/icon-arrow-down.svg")){
+      iconArrow.src = "images/icon-arrow-up.svg"
+    }
+    else{
+      iconArrow.src = "images/icon-arrow-down.svg"
+    }

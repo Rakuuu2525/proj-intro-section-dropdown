@@ -1,0 +1,119 @@
+@use '../global' as g;
+@use '../util' as u;
+.header{
+    .overlay{
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background-color: g.$TransparentBlack;
+    }
+    &__logo{
+        margin-right: u.rem(63);
+    }
+    &__links{
+        position: relative;
+            img{
+                margin-left: u.rem(16);
+                object-fit: cover;
+            }
+        #Features{
+            right: u.rem(40);
+        }
+        .dropbtn{
+            margin-right: u.rem(40);
+
+        }
+        .dropdown-content{
+            position: absolute;
+            background-color: white;
+            white-space: nowrap;
+            display: none;
+            top: u.rem(40);
+            border-radius: u.rem(13);
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: u.rem(24);
+            a{
+                display: block;
+                &:not(:last-child){
+                    margin-bottom: u.rem(20);
+                }
+                img{
+                    width: 16px;
+                    height: 18px;
+                    margin-right: u.rem(15);
+                    object-fit: contain;
+                } 
+            }
+        }
+        .show{
+            display: block;
+        }       
+    }
+    .signup{
+        .login{
+            @include u.breakpoint-up(large){
+                margin-right: u.rem(42);
+            }   
+        }
+    }
+    &__menu{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: calc(100% - u.rem(135)) ;
+        background-color: g.$AlmostWhite;
+        overflow-x: scroll;
+        #icon{  
+            text-align: right;
+            margin-bottom: u.rem(37);
+        }
+        a{
+            display: block;
+            text-align: left;
+        }
+        .container{
+            padding-left: u.rem(25);
+            padding-right: u.rem(20);
+        }
+        .dropbtn{
+            margin-bottom: u.rem(30);
+
+            img{
+                margin-left: u.rem(16);
+                object-fit: cover;
+            }
+        }
+        .dropdown-content{
+            margin-block: u.rem(35);
+            display: none;
+            a{
+                margin-left: u.rem(23);
+                &:not(:last-child){
+                    margin-bottom: u.rem(22);
+                }
+
+                img{
+                    width: 16px;
+                    height: 18px;
+                    margin-right: u.rem(15);
+                    object-fit: contain;
+                } 
+            }
+        }
+        .signup{
+            a{
+                text-align: center;
+            }
+            .login{
+                margin-top: u.rem(40);
+                margin-bottom: u.rem(16);
+            }
+        }
+        .show{
+            display: block;
+        }   
+    }
+    nav{
+        position: relative;
+    }
+}

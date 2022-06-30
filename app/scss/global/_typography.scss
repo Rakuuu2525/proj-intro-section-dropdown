@@ -1,0 +1,24 @@
+@use 'color' as c;
+@use '../util' as u;
+h1, h2, h3, p{
+    margin: 0;
+}
+p{
+    font-size: u.rem(16);
+    line-height: 1.5;
+    color: c.$MediumGray;
+}
+a, a:visited, a:active{
+    text-decoration: none;
+}
+
+a{
+    color: c.$MediumGray;
+    font-size: u.rem(18);
+    font-weight: 500;
+    transition: all 200ms ease-in-out;
+    &:hover{
+        color: c.$AlmostBlack;
+        border-color: c.$AlmostBlack;
+    }
+}
