@@ -63,13 +63,13 @@
         width: calc(100% - u.rem(135)) ;
         background-color: g.$AlmostWhite;
         height: 100vh;
+        
+        a{
+            display: block;
+        }
         #icon{  
             text-align: right;
             margin-bottom: u.rem(37);
-        }
-        a{
-            display: block;
-            text-align: left;
         }
         .container{
             padding-left: u.rem(25);
